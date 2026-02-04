@@ -135,8 +135,7 @@
 
 		diy_led: led-1 {
 			label = "diy";
-			linux,default-trigger = "ir-user-click";
-			default-state = "off";
+			linux,default-trigger = "heartbeat";
 			gpios = <&gpio0 RK_PB5 GPIO_ACTIVE_HIGH>;
 		};
 	};
@@ -802,10 +801,9 @@
 
 &sdhci {
 	bus-width = <8>;
-	mmc-hs400-1_8v;
+	mmc-hs200-1_8v;
     max-frequency = <150000000>;
 	keep-power-in-suspend;
-	mmc-hs400-enhanced-strobe;
 	non-removable;
 	status = "okay";
 };
